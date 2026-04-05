@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Avisame</title>
+    <title>Criar Conta</title>
 
     <link rel="stylesheet" href="/css/auth.css">
     <!-- Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -18,7 +20,7 @@
         <nav class="nav-menu">
             <a href="index.html" class="logoAvisame" id="logoAvisame">Avisame</a>
             <ul class="nav-links">
-                <li><a href="register.html">Criar conta</a></li>
+                <li><a href="index.html">Login</a></li>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
@@ -29,9 +31,14 @@
 
         <div class="content">
 
-            <h1>Entrar</h1>
+            <h1>Criar Conta</h1>
 
-            <form action="" method="post" id="form-login">
+            <form action="" method="post" id="form-register">
+
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
 
                 <div class="form-group">
                     <label for="email">E-mail</label>
@@ -43,9 +50,9 @@
                     <input type="password" id="password" name="password" required>
                 </div>
 
-                <button type="submit" id="btn-login">Entrar</button>
+                <button type="submit" id="btn-register">Enviar</button>
 
-                <p> Não tem uma conta? <a href="register.html">Cadastre-se</a> </p>
+                <p> Já tenho uma conta? <a href="index.html">Faça login</a> </p>
 
             </form>
 
@@ -53,10 +60,11 @@
     </div>
 
     <footer id="footer">
-    
+
         <div class="footer-midias-links">
             <ul>
-                <li><a href="https://www.linkedin.com/in/hudisson-xavier" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/hudisson-xavier" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a></li>
                 <li><a href="https://github.com/hudisson" target="_blank"><i class="fa-brands fa-github"></i></a></li>
                 <!-- <li><a href="#">Blog</a></li> -->
             </ul>

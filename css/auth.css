@@ -104,7 +104,7 @@ header {
     box-shadow: 0 0 5px rgba(194, 224, 214, 0.5);
 }
 
-#btn-login {
+#btn-login, #btn-register {
     width: 100%;
     padding: 10px;
     background: #121312;
@@ -116,18 +116,18 @@ header {
     transition: 0.3s;
 }
 
-#btn-login:hover {
+#btn-login:hover, #btn-register:hover {
     background: #4c613e;
     transition: 0.3s;
 }
 
-#form-login p {
+#form-login p, #form-register p {
     margin-top: 15px;
     text-align: center;
     font-size: 14px;
 }
 
-#form-login p a {
+#form-login p a, #form-register p a {
     color: #688655;
     text-decoration: none;
     font-weight: bold;
