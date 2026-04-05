@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avisame - Home</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-menu">
+            <a href="index.html" class="logoAvisame" id="logoAvisame">Avisame</a>
+            <ul class="nav-links">
+                <li> <span id="txt-username">Fulano da Silva</span>Username</li>
+                <li><a href="#">Sais</a></li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+
+<div class="menu-sidebar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Perfil</a></li>
+        <li>
+            <span class="span-agenda" id="span-agenda"> <i class="fa-solid fa-circle-chevron-down"></i> Agenda </span>
+            <ul class="ul-agenda" id="ul-agenda">
+                <li><a href="#">Atividade diária</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Definir horário</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">Sair</a></li>
+    </ul>
+</div>
+
+<script>
+    const spanAgenda = document.querySelector('.span-agenda');
+    const ulAgenda = document.getElementById('ul-agenda');
+
+    spanAgenda.addEventListener('click', () => {
+        ulAgenda.classList.toggle('ativo');
+    });
+</script>
+
+<!-- Conteúdo -->
+<div class="container">
+    <div class="content">
+
+        <div class="welcome-message" id="welcome-message">
+            <!-- <h1>Bem-vindo ao Avisame!</h1> -->
+            <h2>Olá, Fulano da Silva!</h2>
+            <p>Este é o seu painel de controle. Aqui você pode acessar suas atividades diárias, eventos e definir seus
+                horários.</p>
+        </div>
+
+        <!-- Resumo da agenda -->
+        <div class="div-agenda" id="div-agenda">
+
+            <div class="atividades-diarias">
+                <h2>Atividades Diárias</h2>
+
+                <p class="quantidade-atividades">Total de atividades: <span id="totalAtividades">30</span></p>
+
+                <a href="#" class="btn-ver-atividades" id="p-ver-atividades">Ver todas as atividades</a>
+
+
+            </div>
+
+            <div class="div-eventos" id="div-eventos">
+
+                <div class="eventos-container" id="eventos-container">
+
+                    <div class="proximos-eventos">
+                        <h2>Próximos Eventos</h2>
+                        <p class="p-info">Eventos a serem realizados</p>
+                        <p class="quantidade-eventos">Total de eventos: <span id="totalEventosProximos">5</span></p>
+                    </div>
+
+                    <div class="eventos-passados">
+                        <h2>Eventos Passados</h2>
+                        <p class="p-info">Eventos já realizados</p>
+                        <p class="quantidade-eventos">Total de eventos: <span id="totalEventosPassados">10</span></p>
+                    </div>
+                </div>
+
+
+                <a href="#" class="btn-ver-eventos" id="p-ver-eventos">Ver todos os eventos</a>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+</html>
