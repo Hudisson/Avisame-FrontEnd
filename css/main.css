@@ -99,7 +99,7 @@ header {
 }
 
 /*dropdown agenda*/
-.ul-agenda {
+.ul-agenda{
     display: none;
     list-style: none;
     padding-left: 15px;
@@ -110,18 +110,18 @@ header {
     display: block;
 }
 
-.ul-agenda.ativo {
+.ul-agenda.ativo{
     display: block;
 }
 
-#span-agenda{
+#span-agenda, #span-tasks{
     display: block;
     padding: 10px;
     background-color: #363b3f;
     border-radius: 4px;
 }
 
-#span-agenda i{ 
+#span-agenda i, #span-tasks i{ 
     color: #fff; 
     margin-right: 10%;
     font-size: 20px;
@@ -230,4 +230,72 @@ header {
 
 .btn-ver-eventos:hover, .btn-ver-atividades:hover {
     background-color: #688655; 
+}
+
+/*Página tasks*/
+
+.div-tasks-list{
+
+    width: 100%;
+    padding: 10px;
+
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+
+}
+
+.div-tasks-list h3{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#tasks-list{
+    list-style: none;
+}
+
+#tasks-list li{
+    margin-top: 5px;
+    color: #fff;
+}
+
+.ul-tasks li a{
+    text-decoration: none;
+    color: #121312;
+}
+
+.ul-tasks li a:hover{
+    display: block;
+    color: #fff;
+    background-color: #121312;
+    padding: 5px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.ul-tasks{
+    display: none;
+    list-style: none;
+    padding-left: 15px;
+}
+.ul-Monday.ativo, .ul-Tuesday.ativo, .ul-Wednesday.ativo, 
+.ul-Thursday.ativo, .ul-Friday.ativo, .ul-Saturday.ativo, 
+.ul-Sunday.ativo{
+    display: block;
+}
+
+/*tasks-description*/
+.tasks-description{
+    width: 70%;
+    padding: 20px;
+
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    margin-left: 25%;
+}
+
+.tasks-description p{
+    margin-bottom: 10px;
+    color: #121312;
 }

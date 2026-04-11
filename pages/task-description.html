@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Descrição da Atividade</title>
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-menu">
+            <a href="index.html" class="logoAvisame" id="logoAvisame">Avisame</a>
+            <ul class="nav-links">
+                <li> <span id="txt-username">Fulano da Silva</span>Username</li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    -
+    <div class="menu-sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li>
+                <span class="span-agenda" id="span-agenda"> <i class="fa-solid fa-circle-chevron-down"></i> Agenda
+                </span>
+                <ul class="ul-agenda" id="ul-agenda">
+                    <li><a href="tasks.html">Atividade diária</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Definir horário</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Sair</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const spanAgenda = document.querySelector('.span-agenda');
+        const ulAgenda = document.getElementById('ul-agenda');
+
+        spanAgenda.addEventListener('click', () => {
+            ulAgenda.classList.toggle('ativo');
+        });
+    </script>
+
+    <!-- Conteúdo -->
+    <div class="container">
+
+            <div class="content">
+                <div class="atividades-diarias tasks-description" id="tasks-description">
+                    <h2>Título da Atividade</h2>
+                    <p>
+                        Descrição detalhada da atividade. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p>
+                        <b>Dia da semana:</b> <span id="dia-da-semana">Segunda-feira</span> <br>
+                        <b>Hora:</b> <span id="horario">10:00</span>
+                    </p>
+            </div>
+            </div>
+
+        </div>
+</body>
+
+</html>

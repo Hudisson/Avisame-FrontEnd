@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avisame - Atividades</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-menu">
+            <a href="index.html" class="logoAvisame" id="logoAvisame">Avisame</a>
+            <ul class="nav-links">
+                <li> <span id="txt-username">Fulano da Silva</span>Username</li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="menu-sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li>
+                <span class="span-agenda" id="span-agenda"> <i class="fa-solid fa-circle-chevron-down"></i> Agenda
+                </span>
+                <ul class="ul-agenda" id="ul-agenda">
+                    <li><a href="tasks.html">Atividade diária</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Definir horário</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Sair</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const spanAgenda = document.querySelector('.span-agenda');
+        const ulAgenda = document.getElementById('ul-agenda');
+
+        spanAgenda.addEventListener('click', () => {
+            ulAgenda.classList.toggle('ativo');
+        });
+    </script>
+
+    <!-- Conteúdo -->
+    <div class="container">
+        <div class="content">
+
+            <!-- Atividades diárias -->
+            <div class="div-agenda" id="div-agenda">
+
+                <div class="div-tasks-list">
+                    <h2>Atividades Diárias</h2>
+
+                    <ul id="tasks-list">
+                        <li>
+                            <span class="span-agenda span-tasks Monday" id="span-tasks"> <i
+                                    class="fa-solid fa-circle-chevron-down"></i>
+                                Segunda-feira</span>
+                            <ul class="ul-tasks ul-Monday" id="tasks-Monday">
+                                <li><a href="task-description.html">Atividade 1</a></li>
+                                <li><a href="#">Atividade 2</a></li>
+                                <li><a href="#">Atividade 3</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span class="span-agenda span-tasks Tuesday" id="span-tasks"> <i
+                                    class="fa-solid fa-circle-chevron-down"></i>
+                                Terça-feira</span>
+                            <ul class="ul-tasks ul-Tuesday" id="tasks-Tuesday">
+                                <li><a href="#">Atividade 1</a></li>
+                                <li><a href="#">Atividade 2</a></li>
+                                <li><a href="#">Atividade 3</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span class="span-agenda span-tasks Wednesday" id="span-tasks"> <i
+                                    class="fa-solid fa-circle-chevron-down"></i>
+                                Quarta-feira</span>
+                            <ul class="ul-tasks ul-Wednesday" id="tasks-Wednesday">
+                                <li><a href="#">Atividade 1</a></li>
+                                <li><a href="#">Atividade 2</a></li>
+                                <li><a href="#">Atividade 3</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span class="span-agenda span-tasks Thursday" id="span-tasks"> <i
+                                    class="fa-solid fa-circle-chevron-down"></i>
+                                Quinta-feira</span>
+                            <ul class="ul-tasks ul-Thursday" id="tasks-Thursday">
+                                <li><a href="#">Atividade 1</a></li>
+                                <li><a href="#">Atividade 2</a></li>
+                                <li><a href="#">Atividade 3</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span class="span-agenda span-tasks Friday" id="span-tasks"> <i
+                                    class="fa-solid fa-circle-chevron-down"></i>
+                                Sexta-feira</span>
+                            <ul class="ul-tasks ul-Friday" id="tasks-Friday">
+                                <li><a href="#">Atividade 1</a></li>
+                                <li><a href="#">Atividade 2</a></li>
+                                <li><a href="#">Atividade 3</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span class="span-agenda span-tasks Saturday" id="span-tasks"> <i
+                                    class="fa-solid fa-circle-chevron-down"></i>
+                                Sábado</span>
+                            <ul class="ul-tasks ul-Saturday" id="tasks-Saturday">
+                                <li><a href="#">Atividade 1</a></li>
+                                <li><a href="#">Atividade 2</a></li>
+                                <li><a href="#">Atividade 3</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span class="span-agenda span-tasks Sunday" id="span-tasks"> <i
+                                    class="fa-solid fa-circle-chevron-down"></i>
+                                Domingo</span>
+                            <ul class="ul-tasks ul-Sunday" id="tasks-Sunday">
+                                <li><a href="#">Atividade 1</a></li>
+                                <li><a href="#">Atividade 2</a></li>
+                                <li><a href="#">Atividade 3</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>
+
+
+
+<script>
+    const spanTasks = document.querySelectorAll('.span-tasks');
+    const ulTasks = document.querySelectorAll('.ul-tasks');
+
+    spanTasks.forEach((span, index) => {
+        span.addEventListener('click', () => {
+            ulTasks[index].classList.toggle('ativo');
+        });
+    });
+    
+    
+</script>
