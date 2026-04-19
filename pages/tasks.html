@@ -12,6 +12,9 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!---Importação do TinyMCE-->
+    <script src="/js/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -57,6 +60,52 @@
     <div class="container">
         <div class="content">
 
+            <div class="form-criar-atividade" id="form-criar-atividade">
+                <h2>Nova tarefa</h2>
+                <form id="create-task-form">
+                    <div class="form-group title-group" id="title-group">
+                        <label for="task-title">Título da atividade</label>
+                        <input type="text" id="task-title" placeholder="Título da atividade" required>
+                    </div>
+
+                    <div class="form-group days-group" id="days-group">
+                        <label for="task-day">Dia da semana</label>
+                        <select id="task-day" required>
+                            <option value="">Selecione um dia</option>
+                            <option value="Monday">Segunda-feira</option>
+                            <option value="Tuesday">Terça-feira</option>
+                            <option value="Wednesday">Quarta-feira</option>
+                            <option value="Thursday">Quinta-feira</option>
+                            <option value="Friday">Sexta-feira</option>
+                            <option value="Saturday">Sábado</option>
+                            <option value="Sunday">Domingo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label for="task-active">Ativa</label>
+                        <input type="checkbox" id="task-active">
+                    </div>
+
+                    <div class="form-group" id="description-group">
+                        <label for="task-description">Descrição da atividade</label>
+                        <textarea id="mytextarea"></textarea>
+
+                        <script>
+                            tinymce.init({
+                                selector: '#mytextarea',
+                                license_key: 'gpl',
+                                // Liste apenas os menus que deseja manter, omitindo o 'file'
+                                menubar: 'edit insert view format table tools help'
+                            });
+                        </script>
+
+                    </div>
+
+                    <button type="submit" id="btn-form-tasks">Criar Atividade</button>
+                </form>
+            </div>
+
             <!-- Atividades diárias -->
             <div class="div-agenda" id="div-agenda">
 
@@ -69,9 +118,9 @@
                                     class="fa-solid fa-circle-chevron-down"></i>
                                 Segunda-feira</span>
                             <ul class="ul-tasks ul-Monday" id="tasks-Monday">
-                                <li><a href="task-description.html">Atividade 1</a></li>
-                                <li><a href="#">Atividade 2</a></li>
-                                <li><a href="#">Atividade 3</a></li>
+                                <li><a href="task-description.html?task_id=1">Atividade 1</a></li>
+                                <li><a href="task-description.html?task_id=2">Atividade 2</a></li>
+                                <li><a href="task-description.html?task_id=3">Atividade 3</a></li>
                             </ul>
                         </li>
 
@@ -80,9 +129,9 @@
                                     class="fa-solid fa-circle-chevron-down"></i>
                                 Terça-feira</span>
                             <ul class="ul-tasks ul-Tuesday" id="tasks-Tuesday">
-                                <li><a href="#">Atividade 1</a></li>
-                                <li><a href="#">Atividade 2</a></li>
-                                <li><a href="#">Atividade 3</a></li>
+                                <li><a href="task-description.html?task_id=4">Atividade 1</a></li>
+                                <li><a href="task-description.html?task_id=5">Atividade 2</a></li>
+                                <li><a href="task-description.html?task_id=6">Atividade 3</a></li>
                             </ul>
                         </li>
 
@@ -91,9 +140,9 @@
                                     class="fa-solid fa-circle-chevron-down"></i>
                                 Quarta-feira</span>
                             <ul class="ul-tasks ul-Wednesday" id="tasks-Wednesday">
-                                <li><a href="#">Atividade 1</a></li>
-                                <li><a href="#">Atividade 2</a></li>
-                                <li><a href="#">Atividade 3</a></li>
+                                <li><a href="task-description.html?task_id=7">Atividade 1</a></li>
+                                <li><a href="task-description.html?task_id=8">Atividade 2</a></li>
+                                <li><a href="task-description.html?task_id=9">Atividade 3</a></li>
                             </ul>
                         </li>
 
@@ -102,9 +151,9 @@
                                     class="fa-solid fa-circle-chevron-down"></i>
                                 Quinta-feira</span>
                             <ul class="ul-tasks ul-Thursday" id="tasks-Thursday">
-                                <li><a href="#">Atividade 1</a></li>
-                                <li><a href="#">Atividade 2</a></li>
-                                <li><a href="#">Atividade 3</a></li>
+                                <li><a href="task-description.html?task_id=10">Atividade 1</a></li>
+                                <li><a href="task-description.html?task_id=11">Atividade 2</a></li>
+                                <li><a href="task-description.html?task_id=12">Atividade 3</a></li>
                             </ul>
                         </li>
 
@@ -113,9 +162,9 @@
                                     class="fa-solid fa-circle-chevron-down"></i>
                                 Sexta-feira</span>
                             <ul class="ul-tasks ul-Friday" id="tasks-Friday">
-                                <li><a href="#">Atividade 1</a></li>
-                                <li><a href="#">Atividade 2</a></li>
-                                <li><a href="#">Atividade 3</a></li>
+                                <li><a href="task-description.html?task_id=13">Atividade 1</a></li>
+                                <li><a href="task-description.html?task_id=14">Atividade 2</a></li>
+                                <li><a href="task-description.html?task_id=15">Atividade 3</a></li>
                             </ul>
                         </li>
 
@@ -124,9 +173,9 @@
                                     class="fa-solid fa-circle-chevron-down"></i>
                                 Sábado</span>
                             <ul class="ul-tasks ul-Saturday" id="tasks-Saturday">
-                                <li><a href="#">Atividade 1</a></li>
-                                <li><a href="#">Atividade 2</a></li>
-                                <li><a href="#">Atividade 3</a></li>
+                                <li><a href="task-description.html?task_id=16">Atividade 1</a></li>
+                                <li><a href="task-description.html?task_id=17">Atividade 2</a></li>
+                                <li><a href="task-description.html?task_id=18">Atividade 3</a></li>
                             </ul>
                         </li>
 
@@ -135,9 +184,9 @@
                                     class="fa-solid fa-circle-chevron-down"></i>
                                 Domingo</span>
                             <ul class="ul-tasks ul-Sunday" id="tasks-Sunday">
-                                <li><a href="#">Atividade 1</a></li>
-                                <li><a href="#">Atividade 2</a></li>
-                                <li><a href="#">Atividade 3</a></li>
+                                <li><a href="task-description.html?task_id=19">Atividade 1</a></li>
+                                <li><a href="task-description.html?task_id=20">Atividade 2</a></li>
+                                <li><a href="task-description.html?task_id=21">Atividade 3</a></li>
                             </ul>
                         </li>
 
@@ -149,10 +198,9 @@
         </div>
     </div>
 
-    </body>
+</body>
+
 </html>
-
-
 
 <script>
     const spanTasks = document.querySelectorAll('.span-tasks');
@@ -163,6 +211,6 @@
             ulTasks[index].classList.toggle('ativo');
         });
     });
-    
-    
+
+
 </script>

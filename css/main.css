@@ -60,7 +60,7 @@ header {
 .menu-sidebar{
     display: flex;
     flex-direction: column;
-    top: 90px;
+    top: 89px;
     position: fixed;
     padding: 20px;
 
@@ -298,4 +298,97 @@ header {
 .tasks-description p{
     margin-bottom: 10px;
     color: #121312;
+}
+
+/* Formulário de criação de atividade */
+.form-criar-atividade{
+    width: 100%;
+    padding: 20px;
+    margin-left: 10%;
+
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.form-criar-atividade h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.checkbox-group input[type="checkbox"]{
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+#days-group {
+    margin-top: 5px;
+}
+
+#days-group label{
+    display: block;
+    margin: 0;
+}
+
+#days-group select{
+    width: 10%;
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+#title-group{
+    margin-top: 5px;
+}
+
+#title-group label{
+    display: block;
+    margin: 0;
+}
+
+#title-group input[type="text"]{
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#create-task-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#create-task-form label{
+    display: block;
+    margin-top: 5;
+}
+
+#btn-form-tasks{
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 10px;
+    background-color: #2c3130; 
+    color: #fff; 
+    font-weight: bold;
+    text-decoration: none; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+#btn-form-tasks:hover {
+    background-color: #6a7c5f; 
+    cursor: pointer;
 }

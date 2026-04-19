@@ -62,6 +62,11 @@
             <div class="content">
                 <div class="atividades-diarias tasks-description" id="tasks-description">
                     <h2>Título da Atividade</h2>
+
+                    <p>
+                        <span id="task-id"></span>
+                    </p>
+
                     <p>
                         Descrição detalhada da atividade. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                         do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -70,10 +75,28 @@
                         <b>Dia da semana:</b> <span id="dia-da-semana">Segunda-feira</span> <br>
                         <b>Hora:</b> <span id="horario">10:00</span>
                     </p>
+                </div>
             </div>
-            </div>
+    </div>
 
-        </div>
+    <script>
+        // Função para obter o ID da tarefa a partir da URL
+        function getTaskIdFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('task_id');
+        }
+
+        /**
+         * Função para exibir os detalhes da tarefa com base no ID obtido da URL.
+         *  Futuramente substituir o conteúdo estático por uma chamada a API para obter os detalhes reais da tarefa.
+        */
+        document.addEventListener('DOMContentLoaded', () => {
+            const taskId = getTaskIdFromURL();
+            document.getElementById('task-id').textContent = `ID da Tarefa: ${taskId}`;
+        });
+
+    </script>
+
 </body>
 
 </html>
