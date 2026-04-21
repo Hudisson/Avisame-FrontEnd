@@ -245,8 +245,8 @@ header {
 
 }
 
-.div-tasks-list h3{
-    font-size: 16px;
+.div-tasks-list h2{
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
@@ -316,19 +316,27 @@ header {
     margin-bottom: 20px;
 }
 
+#days-group-and-active-task{
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    width: 100%;
+}
+
 .checkbox-group{
     display: flex;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .checkbox-group input[type="checkbox"]{
     margin-left: 10px;
-    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 #days-group {
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
 #days-group label{
@@ -337,7 +345,7 @@ header {
 }
 
 #days-group select{
-    width: 10%;
+    width: 150px;
     padding: 5px;
     margin: 0;
     border: 1px solid #ccc;
@@ -346,7 +354,7 @@ header {
 }
 
 #title-group{
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
 #title-group label{
@@ -372,7 +380,14 @@ header {
 
 #create-task-form label{
     display: block;
-    margin-top: 5;
+    margin-top: 5px
+}
+
+#description-group label{
+    display: block;
+    margin-top: 5px;
+    margin-left: 40%;
+    font-weight: bold;
 }
 
 #btn-form-tasks{

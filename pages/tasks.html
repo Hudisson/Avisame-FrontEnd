@@ -21,7 +21,7 @@
 
     <header>
         <nav class="nav-menu">
-            <a href="index.html" class="logoAvisame" id="logoAvisame">Avisame</a>
+            <a href="home.html" class="logoAvisame" id="logoAvisame">Avisame</a>
             <ul class="nav-links">
                 <li> <span id="txt-username">Fulano da Silva</span>Username</li>
                 <li><a href="#">Sair</a></li>
@@ -31,8 +31,8 @@
 
     <div class="menu-sidebar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Perfil</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="profile.html">Perfil</a></li>
             <li>
                 <span class="span-agenda" id="span-agenda"> <i class="fa-solid fa-circle-chevron-down"></i> Agenda
                 </span>
@@ -68,24 +68,33 @@
                         <input type="text" id="task-title" placeholder="Título da atividade" required>
                     </div>
 
-                    <div class="form-group days-group" id="days-group">
-                        <label for="task-day">Dia da semana</label>
-                        <select id="task-day" required>
-                            <option value="">Selecione um dia</option>
-                            <option value="Monday">Segunda-feira</option>
-                            <option value="Tuesday">Terça-feira</option>
-                            <option value="Wednesday">Quarta-feira</option>
-                            <option value="Thursday">Quinta-feira</option>
-                            <option value="Friday">Sexta-feira</option>
-                            <option value="Saturday">Sábado</option>
-                            <option value="Sunday">Domingo</option>
-                        </select>
+                    <div class="days-group-and-active-task" id="days-group-and-active-task">
+
+                        <div class="form-group days-group" id="days-group">
+                            <label for="task-day">Dia da semana</label>
+                            <select id="task-day" required>
+                                <option value="">Selecione um dia</option>
+                                <option value="Monday">Segunda-feira</option>
+                                <option value="Tuesday">Terça-feira</option>
+                                <option value="Wednesday">Quarta-feira</option>
+                                <option value="Thursday">Quinta-feira</option>
+                                <option value="Friday">Sexta-feira</option>
+                                <option value="Saturday">Sábado</option>
+                                <option value="Sunday">Domingo</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label for="task-active">Ativa</label>
+                            <input type="checkbox" id="task-active">
+                        </div>
+
                     </div>
 
-                    <div class="form-group checkbox-group">
-                        <label for="task-active">Ativa</label>
-                        <input type="checkbox" id="task-active">
-                    </div>
+
+
+
 
                     <div class="form-group" id="description-group">
                         <label for="task-description">Descrição da atividade</label>
