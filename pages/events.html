@@ -68,6 +68,7 @@
                         <label for="event-title">Título do Evento</label>
                         <input type="text" id="event-title" name="event-title" required>
                     </div>
+                    
                     <div class="form-group" id="form-date-group">
                         <label for="form-data-event">Data</label>
                         <input type="date" id="form-data-event" name="data-event" required>
@@ -76,16 +77,19 @@
                     <div class="form-group" id="description-group">
                         <label for="event-description">Descrição do Evento</label>
                         <textarea id="mytextarea"></textarea>
+
+                        <script>
+                            tinymce.init({
+                                selector: '#mytextarea',
+                                license_key: 'gpl',
+                                // Liste apenas os menus que deseja manter, omitindo o 'file'
+                                menubar: 'edit insert view format table tools help'
+                            });
+                        </script>
+
                     </div>
 
-                    <script>
-                        tinymce.init({
-                            selector: '#mytextarea',
-                            license_key: 'gpl',
-                            // Liste apenas os menus que deseja manter, omitindo o 'file'
-                            menubar: 'edit insert view format table tools help'
-                        });
-                    </script>
+                    <button type="submit" id="btn-form-events">Criar Evento</button>
 
                 </form>
 

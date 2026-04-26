@@ -17,6 +17,23 @@
     margin-bottom: 20px;
 }
 
+#title-group{
+    margin-top: 3px;
+}
+
+#title-group label{
+    display: block;
+    margin: 0;
+}
+
+#title-group input[type="text"]{
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px
+}
+
 #form-date-group{
     margin-top: 3px;
 }
@@ -41,4 +58,22 @@
     margin-top: 5px;
     margin-left: 40%;
     font-weight: bold;
+}
+
+#btn-form-events{
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 10px;
+    background-color: #2c3130; 
+    color: #fff; 
+    font-weight: bold;
+    text-decoration: none; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+#btn-form-events:hover {
+    background-color: #6a7c5f; 
+    cursor: pointer;
 }
