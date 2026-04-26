@@ -1,0 +1,44 @@
+.content{
+    width: calc(100% - 250px);
+}
+.form-criar-evento{
+
+    width: 100%;
+    padding: 20px;
+    margin-left: 10%;
+
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.form-criar-evento h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#form-date-group{
+    margin-top: 3px;
+}
+
+#form-date-group label{
+    display: block;
+    margin: 0;
+}
+
+#form-date-group input[type="date"]{
+    width: 150px;
+    padding: 8px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+#description-group label{
+    display: block;
+    margin-top: 5px;
+    margin-left: 40%;
+    font-weight: bold;
+}

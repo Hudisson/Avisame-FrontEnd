@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/events.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!---Importação do TinyMCE-->
+    <script src="/js/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
+
+    <title>Avisame - Eventos</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-menu">
+            <a href="home.html" class="logoAvisame" id="logoAvisame">Avisame</a>
+            <ul class="nav-links">
+                <li> <span id="txt-username">Fulano da Silva</span>Username</li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="menu-sidebar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="profile.html">Perfil</a></li>
+            <li>
+                <span class="span-agenda" id="span-agenda"> <i class="fa-solid fa-circle-chevron-down"></i> Agenda
+                </span>
+                <ul class="ul-agenda" id="ul-agenda">
+                    <li><a href="tasks.html">Atividade diária</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Definir horário</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Sair</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const spanAgenda = document.querySelector('.span-agenda');
+        const ulAgenda = document.getElementById('ul-agenda');
+
+        spanAgenda.addEventListener('click', () => {
+            ulAgenda.classList.toggle('ativo');
+        });
+    </script>
+
+    <!-- Conteúdo -->
+    <div class="container">
+        <div class="content">
+            <div class="form-criar-evento" id="form-criar-evento">
+                <h2>Criar Evento</h2>
+                <form action="" method="post" id="create-evento-form">
+
+                    <div class="form-group title-group" id="title-group">
+                        <label for="event-title">Título do Evento</label>
+                        <input type="text" id="event-title" name="event-title" required>
+                    </div>
+                    <div class="form-group" id="form-date-group">
+                        <label for="form-data-event">Data</label>
+                        <input type="date" id="form-data-event" name="data-event" required>
+                    </div>
+
+                    <div class="form-group" id="description-group">
+                        <label for="event-description">Descrição do Evento</label>
+                        <textarea id="mytextarea"></textarea>
+                    </div>
+
+                    <script>
+                        tinymce.init({
+                            selector: '#mytextarea',
+                            license_key: 'gpl',
+                            // Liste apenas os menus que deseja manter, omitindo o 'file'
+                            menubar: 'edit insert view format table tools help'
+                        });
+                    </script>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
