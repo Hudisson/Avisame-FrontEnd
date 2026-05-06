@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css//tasks.css">
+    <link rel="stylesheet" href="/css/events-description.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Descrição de Eventos</title>
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-menu">
+            <a href="home.html" class="logoAvisame" id="logoAvisame">Avisame</a>
+            <ul class="nav-links">
+                <li> <span id="txt-username">Fulano da Silva</span>Username</li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    -
+    <div class="menu-sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li>
+                <span class="span-agenda" id="span-agenda"> <i class="fa-solid fa-circle-chevron-down"></i> Agenda
+                </span>
+                <ul class="ul-agenda" id="ul-agenda">
+                    <li><a href="tasks.html">Atividade diária</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Definir horário</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Sair</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const spanAgenda = document.querySelector('.span-agenda');
+        const ulAgenda = document.getElementById('ul-agenda');
+
+        spanAgenda.addEventListener('click', () => {
+            ulAgenda.classList.toggle('ativo');
+        });
+    </script>
+
+    <!-- Conteúdo -->
+    <div class="container">
+
+            <div class="content">
+                <div class="acoes" id="acoes">
+                    <a href="events.html" class="btn-voltar"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+                    <a href="#" class="btn-editar"><i class="fa-solid fa-edit"></i> Editar</a>
+                    <a href="#" class="btn-excluir"><i class="fa-solid fa-trash-can"></i> Excluir</a>
+                </div>
+                <div class=" div-evento events-description" id="events-description">
+                    <h2>Título do Evento</h2>
+
+                    <p> <span id="event-id"></span> </p>
+
+                    <p id="data-evento"> <span>Data:</span> 25/12/2024 </p>
+
+                    <label for="descricao-evento">Descrição</label>
+                    <p id="descricao-evento">
+                        Descrição detalhada do evento. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+
+                </div>
+            </div>
+    </div>
+
+    <script>
+        // Função para obter o ID do evento a partir da URL
+        function getEventIdFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('event_id');
+        }
+
+        /**
+         * Função para exibir os detalhes do evento com base no ID obtido da URL.
+         *  Futuramente substituir o conteúdo estático por uma chamada a API para obter os detalhes reais do evento.
+        */
+        document.addEventListener('DOMContentLoaded', () => {
+            const eventId = getEventIdFromURL();
+            document.getElementById('event-id').innerHTML = `<label>ID do Evento:</label> ${eventId}`;
+        });
+
+    </script>
+
+</body>
+
+</html>
