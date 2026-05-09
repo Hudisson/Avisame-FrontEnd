@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avisame - Perfil</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/profile.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-menu">
+            <a href="home.html" class="logoAvisame" id="logoAvisame">Avisame</a>
+            <ul class="nav-links">
+                <li> <span id="txt-username">Fulano da Silva</span>Username</li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="menu-sidebar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="profile.html">Perfil</a></li>
+            <li>
+                <span class="span-agenda" id="span-agenda"> <i class="fa-solid fa-circle-chevron-down"></i> Agenda
+                </span>
+                <ul class="ul-agenda" id="ul-agenda">
+                    <li><a href="tasks.html">Atividade diária</a></li>
+                    <li><a href="events.html">Eventos</a></li>
+                    <li><a href="#">Definir horário</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Sair</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const spanAgenda = document.querySelector('.span-agenda');
+        const ulAgenda = document.getElementById('ul-agenda');
+
+        spanAgenda.addEventListener('click', () => {
+            ulAgenda.classList.toggle('ativo');
+        });
+    </script>
+
+    <!-- Conteúdo -->
+    <div class="container">
+        <div class="content">
+
+            <div class="acoes" id="acoes">
+                <a href="tasks.html" class="btn-voltar"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+                <a href="#" class="btn-editar"><i class="fa-solid fa-edit"></i> Editar</a>
+                <a href="#" class="btn-excluir"><i class="fa-solid fa-trash-can"></i> Excluir</a>
+            </div>
+
+            <div class="user-profile" id="user-profile">
+                <h1>Perfil do Usuário</h1>
+                <p> <span id="user_profile_name">Nome: </span>Fulano da Silva</p>
+
+                 <!-- Exemplo de ID UUID, substitua pelo valor real -->
+                <p> <span id="user_profile_id">Id: </span>216f01fe-f643-405f-bf81-8573d2e7a10d</p>
+
+                <p> <span id="user_profile_email">Email: </span>fulano@email.com</p>
+                <p> <span id="user_profile_created">Criado em: </span>2023-01-01</p>
+                <p> <span id="user_profile_updated">Atualizado em: </span>2023-01-01</p>
+            </div>
+        </div>
+        
+
+
+</body>
+
+</html>
